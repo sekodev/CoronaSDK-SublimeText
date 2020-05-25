@@ -1,5 +1,5 @@
 #
-# Sublime Text plugin to support Corona Editor
+# Sublime Text plugin to support Solar2D Editor
 #
 # Copyright (c) 2013 Corona Labs Inc. A mobile development software company. All rights reserved.
 #
@@ -31,7 +31,7 @@ if corona_utils.SUBLIME_VERSION < 3000:
 
 class AboutCoronaEditorCommand(sublime_plugin.WindowCommand):
   _about_info = None
-  _dev_about_info = '{"url": "https://coronalabs.com/", "version": "<development>", "description": "Corona Editor is the official Corona plugin for Sublime Text"}'
+  _dev_about_info = '{"url": "https://solar2d.com/", "version": "<development>", "description": "Solar2D Editor is the official Solar2D plugin for Sublime Text"}'
 
   def run(self):
     self.load_json("package-metadata.json")
@@ -44,7 +44,7 @@ class AboutCoronaEditorCommand(sublime_plugin.WindowCommand):
       canary_file = os.path.realpath(__file__)
       install_info = "Installed: " + str(datetime.datetime.fromtimestamp(os.path.getmtime(canary_file)))
 
-    about_mesg = "Corona Editor for Sublime Text\n\nVersion: " + self._about_info['version'] + "\n\n" + install_info + "\n\n" + self._about_info['description'] + "\n\n" + sublime_info
+    about_mesg = "Solar2D Editor for Sublime Text\n\nVersion: " + self._about_info['version'] + "\n\n" + install_info + "\n\n" + self._about_info['description'] + "\n\n" + sublime_info
     print("about: " + about_mesg.replace("\n\n", " | "))
     sublime.message_dialog(about_mesg)
 
