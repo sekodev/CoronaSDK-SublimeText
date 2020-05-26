@@ -247,7 +247,7 @@ class CoronaLabsCollector(CoronaLabs, sublime_plugin.EventListener):
   def is_lua_file(self, view):
     # Fairly rigorous test for being a Corona Lua file
     # If the file has not been saved optionally default to being a Corona Lua file
-    return view.match_selector(view.sel()[0].a, "source.lua.corona") if view.file_name() else _corona_utils.GetSetting("corona_sdk_default_new_file_to_corona_lua", default=True)
+    return view.match_selector(view.sel()[0].a, "source.lua.corona") if view.file_name() else _corona_utils.GetSetting("corona_sdk_default_new_file_to_corona_lua", default=False)
 
 
   # Optionally trigger a "build" when a .lua file is saved.  This is best
@@ -261,7 +261,7 @@ class CoronaLabsCollector(CoronaLabs, sublime_plugin.EventListener):
         _corona_utils.debug("Corona Editor: auto build triggered")
         view.window().run_command("build")
 
-    if view.file_name().lower().endswith(".lua") and _corona_utils.GetSetting("corona_sdk_default_new_file_to_corona_lua", default=True):
+    if view.file_name().lower().endswith(".lua") and _corona_utils.GetSetting("corona_sdk_default_new_file_to_corona_lua", default=False):
       view.set_syntax_file("Packages/CoronaSDK-SublimeText/CoronaSDKLua.sublime-syntax")
 
   # When a Lua file is loaded and the "use_periods_in_completion" user preference is set,
