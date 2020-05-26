@@ -18,7 +18,7 @@
 
 	// If this is true then any new file that has not yet been saved will be 
 	// assumed to be a Corona Lua file
-	"corona_sdk_default_new_file_to_corona_lua": true,
+	"corona_sdk_default_new_file_to_corona_lua": false,
 
 	// Set this to the path of your Corona Simulator if it's not installed
 	// in the default location for your operating system (remember to double
