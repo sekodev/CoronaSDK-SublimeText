@@ -2,6 +2,34 @@
 
 Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/blob/master/README.md) for the latest information.
 
+### 2.0.0
+
+ * Complete rebranding of the Editor. Welcome to Solar2D Editor!
+
+### 1.7.7.1
+
+ * Added settings to extension list
+
+### 1.7.7
+
+ * Fix plugin crash
+
+### 1.7.6
+
+ * Fix plugin to set syntax to new language format
+
+### 1.7.5
+
+ * Quick fix for new language format transition
+
+### 1.7.4
+
+ * Syntax Update and Autocomplete Extras
+
+### 1.7.3
+
+ * Fix issue with spaces and special characters in pathnames on macOS
+
 ### 1.7.2
 
  * Fix issue with spaces and special characters in pathnames on macOS
