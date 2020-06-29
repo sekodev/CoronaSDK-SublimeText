@@ -1,5 +1,5 @@
 #
-# Sublime Text plugin to support Corona
+# Sublime Text plugin to support Solar2D
 #
 # Copyright (c) 2013 Corona Labs Inc. A mobile development software company. All rights reserved.
 #
@@ -94,7 +94,7 @@ class CoronaDocsCommand(sublime_plugin.TextCommand):
       # an anchor (if it's not there, you go to the top of the page)
       docUrl = "http://www.lua.org/manual/5.1/manual.html#pdf-" + page
     else:
-      # We don't know what we're on, send them to the Corona Docs search page
+      # We don't know what we're on, send them to the Solar2D Docs search page
       page = UrlEncode(page)
       docUrl = SEARCH_URL.format(search_term=page)
 
