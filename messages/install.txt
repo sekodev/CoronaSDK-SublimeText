@@ -17,7 +17,7 @@ Solar2D Editor makes editing your project a breeze:
  * Debugger for Solar2D code
  * Code completion for all APIs and constants
  * Snippets and code templates
- * Look up API docs directly from your code (public release or daily build docs)
- * Run the current app in the Solar2D Simulator from Sublime
+ * Look up API docs directly from your code
+ * Run your projects in the Solar2D Simulator from Sublime Text
 
 For more information go to: Preferences ➤ Package Settings ➤ Solar2D Editor ➤ README
