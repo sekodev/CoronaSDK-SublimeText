@@ -1,4 +1,4 @@
-## Corona Editor Release Notes
+## Solar2D Editor Release Notes
 
 Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/blob/master/README.md) for the latest information.
 
@@ -6,6 +6,9 @@ Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/bl
 
  * **Rebranding**
  	Complete rebranding of the Editor. Welcome to Solar2D Editor!
+
+
+## Corona Editor Release Notes
 
 ### 1.7.7.1
 
