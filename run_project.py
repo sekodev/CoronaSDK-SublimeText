@@ -1,5 +1,5 @@
 #
-# Sublime Text plugin to support Corona Editor
+# Sublime Text plugin to support Solar2D Editor
 #
 # Copyright (c) 2013 Corona Labs Inc. A mobile development software company. All rights reserved.
 #
