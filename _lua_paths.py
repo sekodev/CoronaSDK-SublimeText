@@ -3,7 +3,7 @@ import re
 
 _findBackslash = re.compile("/")  
 
-# http://rosettacode.org/wiki/Find_common_directory_path#Python
+# https://rosettacode.org/wiki/Find_common_directory_path#Python
 def __commonprefix(*args, sep='/'):
   return os.path.commonprefix(*args).rpartition(sep)[0]
 
