@@ -1,7 +1,7 @@
 #
-# Sublime Text plugin to support Corona Editor
+# Sublime Text plugin to support Solar2D Editor
 #
-# Copyright (c) 2013 Corona Labs Inc. A mobile development software company. All rights reserved.
+# Copyright (c) 2020 Solar2D
 #
 # MIT License - see https://raw.github.com/coronalabs/CoronaSDK-SublimeText/master/LICENSE
 
@@ -51,8 +51,8 @@ def GetSetting(key,default=None):
   debug("GetSetting: " + str(key) + " (default: " + str(default) + ")")
   settings = sublime.load_settings('Corona Editor.sublime-settings')
   debug("GetSetting: value from CE settings: " + str(settings.get(key, default)))
-  # If we don't have a value for this preference in the Corona Editor settings, look in the view for a value
-  # (this happens if the preference is set in the main Sublime Text preference file instead of the Corona Editor file)
+  # If we don't have a value for this preference in the Solar2D Editor settings, look in the view for a value
+  # (this happens if the preference is set in the main Sublime Text preference file instead of the Solar2D Editor file)
   if not settings.get(key, default) and sublime and sublime.active_window() and sublime.active_window().active_view():
     debug("GetSetting: getting value from view: " + str(sublime.active_window().active_view()))
     settings = sublime.active_window().active_view().settings()
@@ -68,7 +68,7 @@ def GetSetting(key,default=None):
 def debug(*args):
   global _corona_sdk_debug
   if _corona_sdk_debug:
-    print("Corona Editor: ", '\t'.join(map(str, args)))
+    print("Solar2D Editor: ", '\t'.join(map(str, args)))
 
 
 InitializedEvent = threading.Event()
@@ -87,7 +87,7 @@ def Init():
   settings = sublime.load_settings('Corona Editor.sublime-settings')
   _corona_sdk_debug = settings.get("corona_sdk_debug", False)
 
-  print("Corona Editor: Init")
+  print("Solar2D Editor: Init")
   debug("Python: " + str(sys.version))
 
   PLUGIN_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -177,7 +177,7 @@ def GetSimulatorCmd(mainlua=None, debug=False):
 
   # Can we find an executable file at the path
   if not os.path.isfile(simulator_path) or not os.access(simulator_path, os.X_OK):
-    sublime.error_message("Cannot find executable Corona Simulator at path '{0}'\n\nYou can set the user preference 'corona_sdk_simulator_path' to the location of the Simulator.".format(simulator_path))
+    sublime.error_message("Cannot find executable Solar2D Simulator at path '{0}'\n\nYou can set the user preference 'corona_sdk_simulator_path' to the location of the Simulator.".format(simulator_path))
     return None, None, None
 
   return simulator_path, simulator_flags, simulator_version
@@ -233,7 +233,7 @@ def GetSimulatorPathFromBuildSettings(mainlua):
     if bs_matches is not None and len(bs_matches) > 0:
       # Last one wins
       simulator_path = bs_matches[-1]
-      print("Corona Editor: corona_sdk_simulator_path set from "+str(build_settings))
+      print("Solar2D Editor: corona_sdk_simulator_path set from "+str(build_settings))
 
   return simulator_path
 
