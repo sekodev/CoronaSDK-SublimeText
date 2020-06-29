@@ -33,7 +33,7 @@ After restarting ***Sublime Text*** you'll have several new features  available 
 
 If the syntax option is set correctly you'll see it displayed in the bottom righthand corner of the ***Sublime Text*** window:
 
-There are several ***Sublime Text*** User Preferences that can be set to fine tune the behavior of the plugin.  You can find information on setting User Preferences here [http://www.sublimetext.com/docs/3/settings.html](http://www.sublimetext.com/docs/3/settings.html).
+There are several ***Sublime Text*** User Preferences that can be set to fine tune the behavior of the plugin.  You can find information on setting User Preferences here [https://www.sublimetext.com/docs/3/settings.html](https://www.sublimetext.com/docs/3/settings.html).
 
 ### Debugger
 Debugger allows code to be single stepped, variables to be examined and breakpoints to be set.  You can run the debugger using the **Solar2D Editor** menu from any file in the project and it will automatically find **main.lua**.  Right click on a code line in the editor and choose **Toggle Breakpoint** to turn a breakpoint on or off.  Select the name of a variable and choose **Inspect Variable** from the context menu to see its value.
@@ -140,7 +140,7 @@ If some aspect of the plugin doesn't behave as expected be sure to include any c
 
 ### Mac
 
-You may want to set the `Use all F1, F2, etc. keys as standard function keys` option in **System Preferences > Keyboard** to make using F10 and F11 easier for the debugger.  Alternatively you may want to reassign the keys used to drive the debugger; information on how to this can be found at [http://www.sublimetext.com/docs/key-bindings](http://www.sublimetext.com/docs/key-bindings)
+You may want to set the `Use all F1, F2, etc. keys as standard function keys` option in **System Preferences > Keyboard** to make using F10 and F11 easier for the debugger.  Alternatively you may want to reassign the keys used to drive the debugger; information on how to this can be found at [https://www.sublimetext.com/docs/key-bindings](https://www.sublimetext.com/docs/key-bindings)
 
 ## Thanks
 
