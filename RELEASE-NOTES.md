@@ -4,7 +4,8 @@ Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/bl
 
 ### 2.0.0
 
- * Complete rebranding of the Editor. Welcome to Solar2D Editor!
+ * **Rebranding**
+ 	Complete rebranding of the Editor. Welcome to Solar2D Editor!
 
 ### 1.7.7.1
 
