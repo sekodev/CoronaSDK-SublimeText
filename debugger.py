@@ -1,7 +1,7 @@
 #
-# Sublime Text plugin to support Corona Editor
+# Sublime Text plugin to support Solar2D Editor
 #
-# Copyright (c) 2013 Corona Labs Inc. A mobile development software company. All rights reserved.
+# Copyright (c) 2020 Solar2D
 #
 # MIT License - see https://raw.github.com/coronalabs/CoronaSDK-SublimeText/master/LICENSE
 
@@ -118,7 +118,7 @@ class CoronaDebuggerThread(threading.Thread):
       self.socket.bind((HOST, PORT))
     except socket.error as msg:
       debug('Bind: ' + str(msg))
-      sublime.error_message("Cannot connect to Corona Simulator (" + str(msg) + ")\n\nPerhaps there is another debugger running.\n\nTry restarting Sublime Text and stopping any Simulators.")
+      sublime.error_message("Cannot connect to Solar2D Simulator (" + str(msg) + ")\n\nPerhaps there is another debugger running.\n\nTry restarting Sublime Text and stop running Simulators.")
       return False
     else:
       debug('Socket bind complete')
@@ -215,7 +215,7 @@ class CoronaDebuggerThread(threading.Thread):
         console_output("Error in remote application: ")
         console_output(self.readFromPUT(size))
       else:
-        print("Corona Editor Error: ", bpResponse)
+        print("Solar2D Editor Error: ", bpResponse)
         on_main_thread(lambda: sublime.error_message("Unexpected response from Simulator:\n\n" + str(bpResponse) + "\n\nCheck Console for error messages."))
 
     # Restore any breakpoint we have saved (breakpoints can only be set when
@@ -600,7 +600,7 @@ class CoronaDebuggerCommand(sublime_plugin.WindowCommand):
       self.window.open_file(mainlua)  # make sure main.lua is open as that's the first place we'll stop
       projectDir = os.path.dirname(mainlua)
       if not projectDir:
-        sublime.error_message("Cannot find 'main.lua' for '"+self.view.file_name()+"'.  This does not look like a Corona app")
+        sublime.error_message("Cannot find 'main.lua' for '"+self.view.file_name()+"'.  This does not look like a Solar2D project.")
         return
 
       dbg_path, dbg_flags, dbg_version = _corona_utils.GetSimulatorCmd(mainlua, True)
@@ -698,7 +698,7 @@ class CoronaDebuggerCommand(sublime_plugin.WindowCommand):
       if coronaDbg is not None:
         coronaDbg.doCommand("dump " + variable_name)
       else:
-        sublime.error_message("Corona Debugger is not running")
+        sublime.error_message("Solar2D Debugger is not running")
 
   def toggle_breakpoint(self, filename, lineno, toggle=True):
     global coronaBreakpointsSettings
@@ -809,7 +809,7 @@ def console_output(text):
     if text[-1] != "\n":
       text += "\n"
     # Remove cruft from Simulator output (also CRs which are coming from somewhere)
-    text = re.sub(r'Corona Simulator\[\d+:\d+\] ', '', text.replace("\r", ""), 1)
+    text = re.sub(r'Solar2D Simulator\[\d+:\d+\] ', '', text.replace("\r", ""), 1)
     consoleOutputQ.put(text, 1)
     sublime.set_timeout(lambda: outputToPane('Console', None, False), 0)
 
