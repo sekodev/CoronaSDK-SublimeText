@@ -9,7 +9,7 @@
 	"corona_sdk_use_fuzzy_completion": true,
 
 	// Corona Editor turns off the special meaning of periods as "word
-	// separators" in Sublime Text to make Corona completions work better.  If
+	// separators" in Sublime Text to make Solar2D completions work better.  If
 	// you like to use cursor movement keys like "Alt+Arrow" to move to the
 	// periods in function calls you might want to turn this off.  The most
 	// obvious effect of turning it off is that when you type a period all the
@@ -17,10 +17,10 @@
 	"corona_sdk_complete_periods": true,
 
 	// If this is true then any new file that has not yet been saved will be
-	// assumed to be a Corona Lua file
+	// assumed to be a Solar2D Lua file
 	"corona_sdk_default_new_file_to_corona_lua": true,
 
-	// Set this to the path of your Corona Simulator if it's not installed
+	// Set this to the path of your Solar2D Simulator if it's not installed
 	// in the default location for your operating system (remember to double
 	// backslashes in Windows' paths)
 	// "corona_sdk_simulator_path": "<path-to-simulator>",
