@@ -1,11 +1,11 @@
 Corona Editor
 =============
 
-***Corona Editor*** is the official ***Corona*** plugin for ***Sublime Text***.  Designed to make building apps even easier by adding functionality to ***Sublime Text*** to improve developer productivity.
+***Corona Editor*** is the official [***Solar2D***](https://solar2d.com/) plugin for ***Sublime Text***.  Designed to make building apps even easier by adding functionality to ***Sublime Text*** to improve developer productivity.
 
 ## Sublime Text Version
 
-[***Sublime Text 3***](https://www.sublimetext.com/) is required to use Corona Editor.  The latest stable release is recommended.
+[***Sublime Text 3***](https://www.sublimetext.com/) is required to use Corona Editor.
  
 ## Installation Instructions
 
@@ -20,7 +20,7 @@ If you want to help test the latest development version of ***Corona Editor*** y
 1. Choose: **Tools > Command Palette... > Package Control: Add Repository**
 1. Enter `https://github.com/coronalabs/CoronaSDK-SublimeText`
 1. Choose: **Tools > Command Palette... > Package Control: Install Package**
-1. Find **Corona Editor - Daily Build** (or, on some machines, **CoronaSDK-SublimeText**) by typing in the search field, click on it to install it
+1. Find **CoronaSDK-SublimeText** (or, on some machines, **Corona Editor - Daily Build**) by typing in the search field, click on it to install it
 1. Restart ***Sublime Text*** or reopen any .lua files to see the new features
 
 Alternatively, if you are comfortable doing manual installs of Sublime Text plugins and want to run the latest development version, you can download the plugin from [https://github.com/coronalabs/CoronaSDK-SublimeText/archive/master.zip](https://github.com/coronalabs/CoronaSDK-SublimeText/archive/master.zip)
@@ -29,16 +29,14 @@ If you install the tip from Github please report any issues using the Issues pag
 
 ## Using the Plugin
 
-After restarting ***Sublime Text*** you'll have several new features  available in the **Corona Editor** menu and in the context menu when editing Corona .lua files.  Most of the features of the plugin rely on the current **Syntax** setting so when editing files you should use **View > Syntax > Corona Lua** command to set the correct syntax for the file.  You will probably also want to change ***Sublime Text***'s default for .lua files by choosing **View > Syntax > Open all with current extension as... > Corona Lua** when you have a .lua file open in the editor.
+After restarting ***Sublime Text*** you'll have several new features  available in the **Corona Editor** menu and in the context menu when editing Solar2D .lua files.  Most of the features of the plugin rely on the current **Syntax** setting so when editing files you should use **View > Syntax > Solar2D Lua** command to set the correct syntax for the file.  You will probably also want to change ***Sublime Text***'s default for .lua files by choosing **View > Syntax > Open all with current extension as... > Solar2D Lua** when you have a .lua file open in the editor.
 
-If the syntax option is set correctly you'll see it displayed in the bottom righthand corner of the ***Sublime Text*** window:
-
-![Corona Lua](http://coronalabs.com/images/st-coronasdklua.png "Corona Lua")
+If the syntax option is set correctly you'll see it displayed in the bottom righthand corner of the ***Sublime Text*** window.
 
 There are several ***Sublime Text*** User Preferences that can be set to fine tune the behavior of the plugin.  You can find information on setting User Preferences here [http://www.sublimetext.com/docs/3/settings.html](http://www.sublimetext.com/docs/3/settings.html).
 
 ### Debugger
-The Corona Debugger allows code to be single stepped, variables to be examined and breakpoints to be set.  You can run the debugger using the **Corona Editor** menu from any file in the project and it will automatically find **main.lua**.  Right click on a code line in the editor and choose **Toggle Breakpoint** to turn a breakpoint on or off.  Select the name of a variable and choose **Inspect Variable** from the context menu to see its value.
+Debugger allows code to be single stepped, variables to be examined and breakpoints to be set.  You can run the debugger using the **Corona Editor** menu from any file in the project and it will automatically find **main.lua**.  Right click on a code line in the editor and choose **Toggle Breakpoint** to turn a breakpoint on or off.  Select the name of a variable and choose **Inspect Variable** from the context menu to see its value.
 
 The following keys also control the Debugger:
 
@@ -50,24 +48,24 @@ The following keys also control the Debugger:
 | F11       | Step over         |
 | Shift+F11 | Step into         |
 
-A simpler alternative to the **Build** command in ***Sublime Text*** is the **Run Project** command in the **Corona Editor** menu (or Super+F10).  It doesn't have all the bells and whistles of the build system but it is quick and easy.  It is also better at finding your project's `main.lua` if you aren't using ***Sublime Text***'s projects.  Super+B (usually bound to the **Build** command) is now bound to the **Run Project** command for Corona Lua files. 
+A simpler alternative to the **Build** command in ***Sublime Text*** is the **Run Project** command in the **Corona Editor** menu (or Super+F10).  It doesn't have all the bells and whistles of the build system but it is quick and easy.  It is also better at finding your project's `main.lua` if you aren't using ***Sublime Text***'s projects.  Super+B (usually bound to the **Build** command) is now bound to the **Run Project** command for Solar2D Lua files. 
 
-On OS X, if you install Daily Builds of Corona in **/Applications** without changing the default name, it will use the highest numbered (most recent) Daily Build to run the project (to change this behavior, see `corona_sdk_simulator_path` below).
+On macOS, if you install Solar2D in **/Applications** without changing the default name, it will use the highest numbered (most recent) build to run the project (to change this behavior, see `corona_sdk_simulator_path` below).
 
 ##### Preferences
  * `corona_sdk_simulator_path` (default: system dependent)
 
-	Set this to the path of your Corona Simulator if it's not installed
+	Set this to the path of your Solar2D Simulator if it's not installed
 	in the default location for your operating system (remember to double
 	the backslashes in Windows paths).  You can also set this in the `build.settings`
-	file of individual projects to customize the version of the Corona Simulator that
+	file of individual projects to customize the version of the Solar2D Simulator that
 	is used for each project (note that the Lua syntax for the `build.settings` file
 	is different to the JSON syntax of the ***Sublime Text*** preference files in that
 	the name of the preference is not quoted in Lua).
 
  * `corona_sdk_simulator_show_console` (default: false)
  
-    Set this to true to have the Corona Simulator Console be shown when running a project with **Super+F10** (or **Super+B**).
+    Set this to true to have the Solar2D Simulator Console be shown when running a project with **Super+F10** (or **Super+B**).
 
 ##### Current Gotchas
  * If you **Run** the project and it doesn't hit a breakpoint, you'll have to stop and restart to regain control (in particular, setting a breakpoint on a line of code you know is being executed wont stop the program).
@@ -76,7 +74,7 @@ On OS X, if you install Daily Builds of Corona in **/Applications** without chan
  * If you create rows and columns in using ***Sublime Text***'s **View > Layout** command in the current tab, the debugger wont create its own panes and its functionality will be reduced.
 
 ### Completion
-Completion works for all API calls and constants (correctly handling periods in the name).  Fuzzy matching is optionally done to increase the chances of finding the item you are looking for.  Completion relies on the current **Syntax** setting so when creating new files you should use **View > Syntax > Corona Lua** command to set the correct syntax for the new file.  You will probably also want to change ***Sublime Text***'s default for .lua files by choosing **View > Syntax > Open all with current extension as... > Corona Lua** when you have a .lua file open in the editor.
+Completion works for all API calls and constants (correctly handling periods in the name).  Fuzzy matching is optionally done to increase the chances of finding the item you are looking for.  Completion relies on the current **Syntax** setting so when creating new files you should use **View > Syntax > Solar2D Lua** command to set the correct syntax for the new file.  You will probably also want to change ***Sublime Text***'s default for .lua files by choosing **View > Syntax > Open all with current extension as... > Solar2D Lua** when you have a .lua file open in the editor.
 
 ##### Preferences
  * `corona_sdk_completion` (default: True)
@@ -89,26 +87,26 @@ Completion works for all API calls and constants (correctly handling periods in 
 
  * `corona_sdk_complete_periods` (default: True)
 
-	Corona Editor turns off the special meaning of periods as "word separators" in Sublime Text to make Corona completions work better.  If you like to use cursor movement keys like "Alt+Arrow" to move to the periods in function calls you might want to turn this off.  The most obvious effect of turning it off is that when you type a period all the completions disappear until you type another character.
+	Corona Editor turns off the special meaning of periods as "word separators" in Sublime Text to make Solar2D completions work better.  If you like to use cursor movement keys like "Alt+Arrow" to move to the periods in function calls you might want to turn this off.  The most obvious effect of turning it off is that when you type a period all the completions disappear until you type another character.
 
  * `corona_sdk_use_docset` (default: `public`)
 
-	Choose which completion set you want to use.  Can be one of `public` (the default), `legacy` or `daily`.
+	Choose which completion set you want to use.  Can be one of `public` (the default), `legacy`(deprecated) or `daily`(deprecated).
 
  * `corona_completions_strip_white_space` (default: False)
 
 	Set to true if you want items to be completed with minimal whitespace included.
 
 ##### Current Gotchas
- * The order of items in the completions popup seems a little odd but is due to Sublime's "fuzzy" matching
+ * The order of items in the completions popup seems a little odd but is due to Sublime Text's "fuzzy" matching
 
  * Some of the completions may have minor errors with nested optional parameters due to the way they are automatically generated.
 
 ### Documentation Lookup
-Documentation can be called up by placing the cursor on an API call (or selecting it) and either hitting **F1** or choosing **Corona Docs** from the context menu.  Lua keywords will be looked up in the Lua documentation.  If the context of something isn't recognized, a search of the Corona documentation will be initiated.
+Documentation can be called up by placing the cursor on an API call (or selecting it) and either hitting **F1** or choosing **Solar2D Docs** from the context menu.  Lua keywords will be looked up in the Lua documentation.  If the context of something isn't recognized, a search of the Solar2D documentation will be initiated.
 
 ##### Current Gotchas
- * Note that right clicking on an item wont move the cursor there so you can't right click on a term that's not at the insertion point and then pick **Corona Docs** from the context menu as it's the position of the text cursor that determines what's looked up (left click on the item first)
+ * Note that right clicking on an item wont move the cursor there so you can't right click on a term that's not at the insertion point and then pick **Solar2D Docs** from the context menu as it's the position of the text cursor that determines what's looked up (left click on the item first)
 
 ### Snippets
 A selection of commonly used code fragments and templates is available via the **Corona Editor > Snippets** menu.  Selecting an item from a submenu will insert its code at the current insertion point in the file.
@@ -119,7 +117,7 @@ A default set of snippets is created in the ***Sublime Text*** support folder `P
 The **Run Project** command in the **Corona Editor** menu (or Super+B or Super+F10) is a simpler alternative to the **Build** command in ***Sublime Text*** (see above for more information).
 
 ### Syntax Highlighting
-Syntax highlighting of Lua with Corona calls is done (choose **View > Syntax > Corona Lua** to enable this).  You will probably also want to change ***Sublime Text***'s default for .lua files by choosing **View > Syntax > Open all with current extension as... > Corona Lua** when you have a .lua file open in the editor.
+Syntax highlighting of Lua with Solar2D calls is done (choose **View > Syntax > Solar2D Lua** to enable this).  You will probably also want to change ***Sublime Text***'s default for .lua files by choosing **View > Syntax > Open all with current extension as... > Solar2D Lua** when you have a .lua file open in the editor.
 
 ### Miscellaneous
  * A shortcut to the ***Sublime Text*** **Goto Anything...** function list has been added to the context menu as **Function Navigator...**. This lists the functions defined in the current file and choosing one takes you to that definition.
@@ -127,7 +125,7 @@ Syntax highlighting of Lua with Corona calls is done (choose **View > Syntax > C
 
 ## Reporting Issues
 
-You can find discussion about Corona Editor on our [http://forums.coronalabs.com/forum/630-corona-editor/](http://forums.coronalabs.com/forum/630-corona-editor/).  Let us know if you'd like to try prerelease versions.
+You can find discussion about Corona Editor on our [https://forums.solar2d.com/c/corona/corona-editor/](https://forums.solar2d.com/c/corona/corona-editor/91).
 
 If some aspect of the plugin doesn't behave as expected be sure to include any console output when reporting the problem.  You can view the console using **View > Show Console** and copy and paste the information displayed there.
 
@@ -146,4 +144,4 @@ You may want to set the `Use all F1, F2, etc. keys as standard function keys` op
 
 ## Thanks
 
-Many thanks to the Corona users who have provided feedback and suggestions to make Corona Editor even better.  Particular thanks to _personalnadir_, _develephant_, _givemeyourgits_ and _landoncope_ for their contributions and help.
+Many thanks to the Solar2D users who have provided feedback and suggestions to make Corona Editor even better.  Particular thanks to _personalnadir_, _develephant_, _givemeyourgits_ and _landoncope_ for their contributions and help.
