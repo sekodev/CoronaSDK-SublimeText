@@ -24,6 +24,7 @@
   {   "trigger": "MFiProfile\tInputDevice",    "contents": "MFiProfile"  }, 
   {   "trigger": "Number\ttype",    "contents": "Number"  }, 
   {   "trigger": "Object\ttype",    "contents": "Object"  }, 
+  {   "trigger": "sqlite3\tsql",    "contents": "sqlite3"  }, 
   {   "trigger": "createGroup()\tParticleSystem",    "contents": "createGroup( ${1:params} )"  }, 
   {   "trigger": "createParticle()\tParticleSystem",    "contents": "createParticle( ${1:params} )"  }, 
   {   "trigger": "destroyParticles()\tParticleSystem",    "contents": "destroyParticles( ${1:params} )"  }, 
