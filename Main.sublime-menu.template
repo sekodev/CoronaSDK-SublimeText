@@ -63,7 +63,7 @@
 		{ "caption": "-" },
 		{ "caption": "Snippets", "children": $corona_snippets },
 		{ "caption": "-" },
-		{ "caption": "Solar2D Debugger", "children": [
+		{ "caption": "Debugger", "children": [
 			  { "caption": "Run", "command": "corona_debugger", "args": {"cmd": "run"} },
 			  { "caption": "Step Over", "command": "corona_debugger", "args": {"cmd": "over"} },
 			  { "caption": "Step Into", "command": "corona_debugger", "args": {"cmd": "step"} },
