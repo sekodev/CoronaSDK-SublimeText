@@ -1,10 +1,12 @@
-## Corona Editor Release Notes
+## Solar2D Editor Release Notes
 
 Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/blob/master/README.md) for the latest information.
 
 ### 1.8
 
  * Changed branding to Solar2D
+ 
+ * Changed syntax name to Lua (Solar2D)
  
  * Updated autocomplete file
  
