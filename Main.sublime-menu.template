@@ -12,7 +12,7 @@
                 "children":
                 [
                     {
-                        "caption": "Corona Editor",
+                        "caption": "Solar2D Editor",
                         "children":
                         [
                             {
@@ -55,7 +55,7 @@
         ]
     },
 
-	{ "id":"corona", "caption": "Corona Editor", "children":
+	{ "id":"corona", "caption": "Solar2D Editor", "children":
 		[
 		{ "caption": "-" },
 		{ "caption": "Solar2D Docs", "command": "corona_docs" },
