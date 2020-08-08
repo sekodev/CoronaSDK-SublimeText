@@ -74,7 +74,7 @@ class CoronaDocsCommand(sublime_plugin.TextCommand):
     else:
       docset = ""
 
-    # Convert "word" under cursor to Corona Docs link, or a Lua docs link
+    # Convert "word" under cursor to Solar2D Docs link, or a Lua docs link
     page = self.view.substr(sublime.Region(start, end))
     page = page.strip(string.punctuation)
 
@@ -94,7 +94,7 @@ class CoronaDocsCommand(sublime_plugin.TextCommand):
       # an anchor (if it's not there, you go to the top of the page)
       docUrl = "https://www.lua.org/manual/5.1/manual.html#pdf-" + page
     else:
-      # We don't know what we're on, send them to the Corona Docs search page
+      # We don't know what we're on, send them to the Solar2D Documentation search page
       page = UrlEncode(page)
       docUrl = SEARCH_URL.format(search_term=page)
 
