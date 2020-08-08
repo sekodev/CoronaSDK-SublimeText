@@ -2,7 +2,7 @@
 
 Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/blob/master/README.md) for the latest information.
 
-### 1.8
+### 1.8.0
 
  * Changed branding to Solar2D
  
