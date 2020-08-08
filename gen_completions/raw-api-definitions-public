@@ -23,6 +23,7 @@ Listener	type
 MFiProfile	InputDevice
 Number	type
 Object	type
+sqlite3 sql
 ParticleSystem:createGroup( params )	ParticleSystem
 ParticleSystem:createParticle( params )	ParticleSystem
 ParticleSystem:destroyParticles( params )	ParticleSystem
@@ -450,6 +451,7 @@ event.x	relativeTouch
 event.x	tap
 event.x	touch
 event.xGravity	accelerometer
+event.xDelta  touch
 event.xInstant	accelerometer
 event.xRaw	accelerometer
 event.xRotation	gyroscope
@@ -464,6 +466,7 @@ event.y	relativeTouch
 event.y	tap
 event.y	touch
 event.yGravity	accelerometer
+event.yDelta  touch
 event.yInstant	accelerometer
 event.yRaw	accelerometer
 event.yRotation	gyroscope
