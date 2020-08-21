@@ -313,7 +313,7 @@ event.name	completion
 event.name	create
 event.name	destroy
 event.name	enterFrame
-event.name  lateUpdate
+event.name	lateUpdate
 event.name	finalize
 event.name	gameNetwork
 event.name	gyroscope
