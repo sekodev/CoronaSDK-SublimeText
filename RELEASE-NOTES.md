@@ -8,7 +8,7 @@ Always check the [README](https://github.com/coronalabs/CoronaSDK-SublimeText/bl
  
  * Changed syntax name to Lua (Solar2D)
  
- * Updated autocomplete file
+ * Updated autocomplete file - event.xDelta/yDelta, sqlite3, lateUpdate, transition.resumeAll(), pauseAll(), cancelAll() and timer.resumeAll(), pauseAll(), cancelAll()
  
  * Changed http:// calls to https://
 
